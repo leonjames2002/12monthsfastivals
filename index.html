@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myanmar Festivals & Flowers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f3e6 0%, #f0e6d2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #d4af37 0%, #a67c00 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .intro {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #d4af37;
+        }
+        
+        .intro h2 {
+            color: #a67c00;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0e68c;
+            display: inline-block;
+        }
+        
+        .content-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            height: fit-content;
+        }
+        
+        .sidebar h3 {
+            color: #a67c00;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .fact-box {
+            background: #f8f3e6;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 3px solid #d4af37;
+        }
+        
+        .festivals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .festival-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .festival-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .card-header h3 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card-body h4 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .card-body h4 span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #f8f3e6;
+        }
+        
+        .flower-info {
+            background: #f8f3e6;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        .flower-info h5 {
+            display: flex;
+            align-items: center;
+            color: #5d4037;
+            margin-bottom: 8px;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #5d4037 0%, #3e2723 100%);
+            color: #ffccbc;
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px 20px 0 0;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-layout {
+                flex-direction: column;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .festivals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .card-header h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Myanmar's 12 Months of Festivals & Flowers</h1>
+            <p>Explore the rich cultural heritage of Myanmar through its traditional festivals and seasonal flowers</p>
+        </header>
+        
+        <section class="intro">
+            <h2>Cultural Significance of Myanmar Festivals</h2>
+            <p>Myanmar's traditional 12-month festivals reflect seasonal customs, religious beliefs, and socio-cultural traditions that have been passed down through generations. These festivals date back to the era of Myanmar kings and were documented in the "Thadhinapyaw" by Minister Thiri Uzana during King Bodawpaya's reign. Despite changes over time, these traditions remain vibrant aspects of Myanmar culture today.</p>
+        </section>
+        
+        <div class="content-layout">
+            <main class="main-content">
+                <div class="festivals-grid">
+                    <!-- Tagu (April) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);">
+                            <h3>Tagu (April)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>💦</span> Thingyan Water Festival</h4>
+                            <p>Celebrated as the New Year festival with water throwing, traditional dances, and merriment.</p>
+                            <div class="flower-info">
+                                <h5><span>🌼</span> Seasonal Flower: Padauk</h5>
+                                <p>The golden Padauk blooms symbolize the arrival of the new year.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kason (May) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
+                            <h3>Kason (May)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>🌳</span> Watering of Bo Tree</h4>
+                            <p>Commemorating Buddha's enlightenment by watering sacred Bodhi trees.</p>
+                            <div class="flower-info">
+                                <h5><span>🌸</span> Seasonal Flower: Thazin</h5>
+                                <p>The delicate white Thazin orchid blooms during this month.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Nayon (June) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #2196f3 0%, #0d47a1 100%);">
+                            <h3>Nayon (June)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>📚</span> Scripture Recitation</h4>
+                            <p>Buddhist scripture recitation competitions held at monasteries.</p>
+                            <div class="flower-info">
+                                <h5><span>🌺</span> Seasonal Flower: Sagar</h5>
+                                <p>Fragrant yellow Sagar flowers bloom abundantly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Waso (July) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #795548 0%, #4e342e 100%);">
+                            <h3>Waso (July)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>🕯️</span> Buddhist Lent Beginning</h4>
+                            <p>Monks begin their three-month retreat during the rainy season.</p>
+                            <div class="flower-info">
+                                <h5><span>🌷</span> Seasonal Flower: Buddha Flower</h5>
+                                <p>Pure white flowers offered to Buddha during this sacred period.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Wagaung (August) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #ff9800 0%, #ef6c00 100%);">
+                            <h3>Wagaung (August)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>✏️</span> Offering of Writing Slates</h4>
+                            <p>Tradition of donating writing materials to monasteries and schools.</p>
+                            <div class="flower-info">
+                                <h5><span>🌻</span> Seasonal Flower: Shwe Tone</h5>
+                                <p>Golden Shwe Tone flowers brighten the monsoon season.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tawthalin (September) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #9c27b0 0%, #6a1b9a 100%);">
+                            <h3>Tawthalin (September)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>🚣</span> Boat Racing Festival</h4>
+                            <p>Traditional boat races held on rivers throughout the country.</p>
+                            <div class="flower-info">
+                                <h5><span>🌹</span> Seasonal Flower: Banana Flower</h5>
+                                <p>Distinctive purple banana flowers used in traditional dishes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Thadingyut (October) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #f44336 0%, #b71c1c 100%);">
+                            <h3>Thadingyut (October)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>🏮</span> Festival of Lights</h4>
+                            <p>Celebrating the end of Buddhist Lent with illuminated pagodas.</p>
+                            <div class="flower-info">
+                                <h5><span>🪷</span> Seasonal Flower: Lotus</h5>
+                                <p>Sacred lotus flowers offered at pagodas nationwide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tazaungmon (November) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #673ab7 0%, #4527a0 100%);">
+                            <h3>Tazaungmon (November)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>🧵</span> Kathina Robe Offering</h4>
+                            <p>Offering of new robes to monks after the end of Buddhist Lent.</p>
+                            <div class="flower-info">
+                                <h5><span>🌷</span> Seasonal Flower: Chocolate Cosmos</h5>
+                                <p>Brown-hued flowers that bloom during the cool season.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Nadaw (December) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #607d8b 0%, #37474f 100%);">
+                            <h3>Nadaw (December)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>🎭</span> Nat Spirit Festival</h4>
+                            <p>Traditional spirit festivals featuring music, dance, and offerings.</p>
+                            <div class="flower-info">
+                                <h5><span>🌺</span> Seasonal Flower: Rose</h5>
+                                <p>Roses of various colors bloom during this cool month.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pyatho (January) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #009688 0%, #00695c 100%);">
+                            <h3>Pyatho (January)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>🐎</span> Traditional Horse Racing</h4>
+                            <p>Traditional horse racing events, now celebrated as Independence Day.</p>
+                            <div class="flower-info">
+                                <h5><span>🌼</span> Seasonal Flower: Ground Orchid</h5>
+                                <p>Beautiful white ground orchids bloom in the cool season.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabodwe (February) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);">
+                            <h3>Tabodwe (February)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>🪔</span> Htamane Festival</h4>
+                            <p>Making and sharing traditional glutinous rice dish "htamane".</p>
+                            <div class="flower-info">
+                                <h5><span>💐</span> Seasonal Flower: Jasmine</h5>
+                                <p>Fragrant white jasmine flowers bloom during this month.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabaung (March) -->
+                    <div class="festival-card">
+                        <div class="card-header" style="background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);">
+                            <h3>Tabaung (March)</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4><span>🛕</span> Sand Pagoda Festival</h4>
+                            <p>Building miniature pagodas from sand along riverbanks.</p>
+                            <div class="flower-info">
+                                <h5><span>🌷</span> Seasonal Flower: Dahlia</h5>
+                                <p>Vibrant dahlias in various colors mark the end of the year.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <aside class="sidebar">
+                <h3>Cultural Significance</h3>
+                
+                <div class="fact-box">
+                    <h4>Seasonal Flowers</h4>
+                    <p>Each month has a special flower that blooms, symbolizing the connection between nature and cultural traditions.</p>
+                </div>
+                
+                <div class="fact-box">
+                    <h4>Historical Roots</h4>
+                    <p>These festivals date back to ancient Myanmar kingdoms and have evolved over centuries.</p>
+                </div>
+                
+                <div class="fact-box">
+                    <h4>Religious Connection</h4>
+                    <p>Most festivals are connected to Buddhist traditions and seasonal agricultural cycles.</p>
+                </div>
+                
+                <div class="fact-box">
+                    <h4>Community Bonding</h4>
+                    <p>Festivals strengthen community ties and preserve cultural heritage through shared experiences.</p>
+                </div>
+                
+                <div class="fact-box">
+                    <h4>UNESCO Recognition</h4>
+                    <p>Some Myanmar festivals are being considered for UNESCO Intangible Cultural Heritage status.</p>
+                </div>
+            </aside>
+        </div>
+        
+        <footer>
+            <p>Myanmar's traditional festivals and flowers are precious cultural heritage that must be preserved for future generations, reflecting the nation's spiritual connection to nature and seasonal cycles.</p>
+        </footer>
+    </div>
+</body>
+</html>
